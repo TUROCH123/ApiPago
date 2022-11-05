@@ -15,14 +15,6 @@ import com.app.apipago.modelo.Usuario;
 import com.app.apipago.repositorio.UsuarioRepositorio;
 import com.app.apipago.service.ApiLoginService;
 import com.app.apipago.util.Constantes;
-//import com.app.apilogin.entity.Respuesta;
-//import com.app.apilogin.entity.UsuarioResponse;
-//import com.app.apilogin.excepciones.IDFException;
-//import com.app.apilogin.excepciones.ResourceNotFoundException;
-//import com.app.apilogin.modelo.Usuario;
-//import com.app.apilogin.repositorio.UsuarioRepositorio;
-//import com.app.apilogin.service.ApiLoginService;
-//import com.app.apilogin.util.Constantes;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 @Component

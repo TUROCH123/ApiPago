@@ -61,13 +61,6 @@ public class LoginControlador {
 		return service.actualizarUsuarioPorID(id, usuarioAct);
 	}
 	
-//	@PutMapping("/actualizarUsuarioPorID")
-//	@PutMapping(path = "/actualizarUsuarioPorID/{id}")
-//	public ResponseEntity<?> actualizarUsuarioPorID(@PathVariable Integer id,@RequestBody Usuario usuarioAct) throws JsonProcessingException {
-//		logger.info(Constantes.MENSAJE2, "[actualizarUsuarioPorID][controller][id] ", id);
-//		return service.actualizarUsuarioPorID(id, usuarioAct);
-//	}
-
 	@DeleteMapping("/eliminarUsuario/{id}")
 	public ResponseEntity<Map<String,Boolean>> eliminarUsuario(@PathVariable Long id){
 		
