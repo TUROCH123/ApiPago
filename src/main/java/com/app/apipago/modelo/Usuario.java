@@ -61,6 +61,12 @@ public class Usuario {
 	@Column(name = "fecha_Vencimiento", length = 60)
 	private String fechaVencimiento;
 	
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+//	@OneToMany(fetch = FetchType.LAZY)
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@JoinTable(name = "usuarios_perfiles", joinColumns = @JoinColumn(name = "usuarios_id"), inverseJoinColumns = @JoinColumn(name = "perfiles_id"))
+	private List<Perfiles> perfiles;
+	
 	public Long getId() {
 		return id;
 	}
@@ -178,6 +184,14 @@ public class Usuario {
 
 	public void setFechaVencimiento(String fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
+	}
+
+	public List<Perfiles> getPerfiles() {
+		return perfiles;
+	}
+
+	public void setPerfiles(List<Perfiles> perfiles) {
+		this.perfiles = perfiles;
 	}
 
 }

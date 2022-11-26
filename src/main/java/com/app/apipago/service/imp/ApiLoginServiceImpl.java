@@ -84,14 +84,15 @@ public class ApiLoginServiceImpl implements ApiLoginService {
 				usuario.setPassword(usuarioAct.getPassword());
 				usuario.setFechaInscripcion(usuarioAct.getFechaInscripcion());
 				usuario.setFechaVencimiento(usuarioAct.getFechaVencimiento());
+				usuario.setSuscrito(usuarioAct.getSuscrito());
 
-//				usuario.getPerfiles().clear();
+				usuario.getPerfiles().clear();
 
-//				if (null == usuarioAct.getPerfiles() ||usuarioAct.getPerfiles().isEmpty()) {
+				if (null == usuarioAct.getPerfiles() ||usuarioAct.getPerfiles().isEmpty()) {
 					logger.info(Constantes.MENSAJE2, "[actualizarUsuarioPorID][service][usuario] ", "PERFILESnulosvacios");
-//				}else {
-//					usuario.getPerfiles().addAll(usuarioAct.getPerfiles());
-//				}
+				}else {
+					usuario.getPerfiles().addAll(usuarioAct.getPerfiles());
+				}
 
 				usuario.getMedioPago().clear();
 

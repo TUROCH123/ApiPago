@@ -69,6 +69,7 @@ public class UsuarioWsImp  implements UsuarioWs {
 		}
 		return response;
 	}
+
 	@Override
 	public Usuario validarDatos(String email,String pass) throws WSException {
 		Usuario response = null;
