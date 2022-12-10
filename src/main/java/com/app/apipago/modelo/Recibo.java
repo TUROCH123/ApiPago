@@ -75,7 +75,7 @@ public class Recibo {
 		this.userId = userId;
 	}
 
-	public Recibo(Double monto, Date fechaPago, MedioPago medioPago, Planes planes, Long userId, Date fechaInscripcion) {
+	public Recibo(Double monto, Date fechaPago, MedioPago medioPago, Planes planes, Long userId, Date fechaInscripcion, String nombre, String apellidos, String suscrito) {
 		super();
 		this.monto = monto;
 		this.fechaPago = fechaPago;
@@ -83,6 +83,9 @@ public class Recibo {
 		this.planes = planes;
 		this.userId = userId;
 		this.fechaInscripcion = fechaInscripcion;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.suscrito = suscrito;
 	}
 
 	public Long getUserId() {
