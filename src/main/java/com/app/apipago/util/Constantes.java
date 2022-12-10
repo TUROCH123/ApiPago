@@ -24,6 +24,7 @@ public class Constantes {
 	public static final String CODIGO_IDT3 = "-3";
 	public static final String CODIGO_IDT2 = "-2";
 	public static final String CODIGO_IDT1 = "-1";
+	public static final String CERO = "0";
 	public static final String MONTH = "MONTH";
 	public static final String YEAR = "YEAR";
 

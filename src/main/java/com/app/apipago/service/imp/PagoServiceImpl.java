@@ -102,20 +102,20 @@ public class PagoServiceImpl implements PagoService {
 		return existeMedioPago;
 	}
 
-	private boolean existePago(Pago pago, boolean existeMedioPago, boolean activo) throws JsonProcessingException {
-		if(existeMedioPago) {
-			String pag = Constantes.printPrettyJSONString(pago);
-			logger.info(Constantes.MENSAJE2, "[realizarPago] ", pag);
-			activo = pagoRepositorio.findById(pago.getId()).isPresent();
-			logger.info(Constantes.MENSAJE2, "[realizarPago][activo] ", activo);
-		}else {
-			String pag = Constantes.printPrettyJSONString(pago);
-			logger.info(Constantes.MENSAJE2, "[realizarPago] ", pag);
-			activo = pagoRepositorio.findById(pago.getId()).isPresent();
-			logger.info(Constantes.MENSAJE2, "[realizarPago][activo] ", activo);
-		}
-		return activo;
-	}
+//	private boolean existePago(Pago pago, boolean existeMedioPago, boolean activo) throws JsonProcessingException {
+//		if(existeMedioPago) {
+//			String pag = Constantes.printPrettyJSONString(pago);
+//			logger.info(Constantes.MENSAJE2, "[realizarPago] ", pag);
+//			activo = pagoRepositorio.findById(pago.getId()).isPresent();
+//			logger.info(Constantes.MENSAJE2, "[realizarPago][activo] ", activo);
+//		}else {
+//			String pag = Constantes.printPrettyJSONString(pago);
+//			logger.info(Constantes.MENSAJE2, "[realizarPago] ", pag);
+//			activo = pagoRepositorio.findById(pago.getId()).isPresent();
+//			logger.info(Constantes.MENSAJE2, "[realizarPago][activo] ", activo);
+//		}
+//		return activo;
+//	}
 
 	@Override
 	public ResponseEntity<Respuesta> mayorIndicePago(Respuesta respuesta) {

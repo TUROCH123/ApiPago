@@ -21,7 +21,6 @@ public class MedioPago {
 	@Column(name = "numeroTarjeta", nullable = false, length = 120)
 	private String numeroTarjeta;
 
-//	@Column(name = "ccv", unique = true)
 	@Column(name = "ccv")
 	private int ccv;
 

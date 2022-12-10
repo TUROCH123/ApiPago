@@ -88,8 +88,8 @@ public class PerfilControlador {
 			@RequestBody Perfiles perfilAct) throws JsonProcessingException, WSException {
 		Perfiles perfilActualizado = new Perfiles();
 
-		String obj = Constantes.printPrettyJSONString(perfilAct);
-		logger.info(Constantes.MENSAJE2, "[actualizarPerfilPorID] ", obj);
+//		String obj = Constantes.printPrettyJSONString(perfilAct);
+//		logger.info(Constantes.MENSAJE2, "[actualizarPerfilPorID] ", obj);
 		logger.info(Constantes.MENSAJE2, "[actualizarPerfilPorID][id] ", id);
 		Usuario usuario = usuarioRepositorio.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("No exite el Usuario"));
